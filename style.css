@@ -1,82 +1,94 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f2f5;
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.calculator-container {
-    background-color: #ffffff;
+body {
+    background-color: #f0f2f5;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+}
+
+header {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 h1 {
-    color: #333333;
-    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+h3 {
+    color: #34495e;
+    font-size: 1.2em;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
 }
 
 label {
-    font-size: 16px;
-    color: #555555;
-    text-align: left;
+    display: block;
+    margin: 10px 0 5px;
+    color: #34495e;
 }
 
-input[type="number"], select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
+input {
     width: 100%;
-    box-sizing: border-box;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
 button {
-    padding: 12px;
-    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1em;
 }
 
-button[type="submit"] {
-    background-color: #007bff;
-    color: #ffffff;
+button:hover {
+    background-color: #2980b9;
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
+p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #2c3e50;
 }
 
-button[type="button"] {
-    background-color: #6c757d;
-    color: #ffffff;
-}
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
 
-button[type="button"]:hover {
-    background-color: #5a6268;
-}
+    .calculator {
+        padding: 15px;
+    }
 
-.result {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333333;
-}
-
-.result.error {
-    color: #dc3545;
+    h1 {
+        font-size: 2em;
+    }
 }
