@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="estilos.css">
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Calculadora</h1>
+        <form id="calc-form">
+            <label for="num1">Primer número:</label>
+            <input type="number" id="num1" required step="any" placeholder="Ingresa un número">
+            
+            <label for="operation">Escoge la operación:</label>
+            <select id="operation" required>
+                <option value="" disabled selected>Selecciona una operación</option>
+                <option value="+">Suma (+)</option>
+                <option value="-">Resta (-)</option>
+                <option value="*">Multiplicación (×)</option>
+                <option value="/">División (÷)</option>
+                <option value="^">Potencia (^)</option>
+                <option value="%">Módulo (%)</option>
+                <option value="sqrt">Raíz cuadrada (√)</option>
+            </select>
+            
+            <label for="num2">Segundo número:</label>
+            <input type="number" id="num2" step="any" placeholder="Ingresa un número">
+            
+            <button type="submit">Calcular</button>
+            <button type="button" onclick="resetForm()">Limpiar</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
