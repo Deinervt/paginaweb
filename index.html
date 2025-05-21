@@ -3,38 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Web</title>
-    <link rel="stylesheet" href="estilos.css">
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <title>Calculadora de Magnitudes Físicas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator-container">
-        <h1>Calculadora</h1>
-        <form id="calc-form">
-            <label for="num1">Primer número:</label>
-            <input type="number" id="num1" required step="any" placeholder="Ingresa un número">
-            
-            <label for="operation">Escoge la operación:</label>
-            <select id="operation" required>
-                <option value="" disabled selected>Selecciona una operación</option>
-                <option value="+">Suma (+)</option>
-                <option value="-">Resta (-)</option>
-                <option value="*">Multiplicación (×)</option>
-                <option value="/">División (÷)</option>
-                <option value="^">Potencia (^)</option>
-                <option value="%">Módulo (%)</option>
-                <option value="sqrt">Raíz cuadrada (√)</option>
-            </select>
-            
-            <label for="num2">Segundo número:</label>
-            <input type="number" id="num2" step="any" placeholder="Ingresa un número">
-            
-            <button type="submit">Calcular</button>
-            <button type="button" onclick="resetForm()">Limpiar</button>
-        </form>
-        <div id="result" class="result"></div>
-    </div>
+    <header>
+        <h1>Calculadora de Magnitudes Físicas</h1>
+        <h3>Estudiante: Deiner Vasquez Toro</h3>
+    </header>
+    <main>
+        <!-- Velocidad (v = d/t) -->
+        <section class="calculator">
+            <h2>Velocidad</h2>
+            <label>Distancia (m): <input type="number" id="distancia" step="any"></label>
+            <label>Tiempo (s): <input type="number" id="tiempo" step="any"></label>
+            <button onclick="calcularVelocidad()">Calcular</button>
+            <p id="resultado-velocidad"></p>
+        </section>
+
+        <!-- Aceleración (a = Δv/Δt) -->
+        <section class="calculator">
+            <h2>Aceleración</h2>
+            <label>Variación de velocidad (m/s): <input type="number" id="deltaV" step="any"></label>
+            <label>Tiempo (s): <input type="number" id="tiempoA" step="any"></label>
+            <button onclick="calcularAceleracion()">Calcular</button>
+            <p id="resultado-aceleracion"></p>
+        </section>
+
+        <!-- Fuerza (F = m*a) -->
+        <section class="calculator">
+            <h2>Fuerza</h2>
+            <label>Masa (kg): <input type="number" id="masa" step="any"></label>
+            <label>Aceleración (m/s²): <input type="number" id="aceleracion" step="any"></label>
+            <button onclick="calcularFuerza()">Calcular</button>
+            <p id="resultado-fuerza"></p>
+        </section>
+
+        <!-- Trabajo (W = F*d) -->
+        <section class="calculator">
+            <h2>Trabajo</h2>
+            <label>Fuerza (N): <input type="number" id="fuerzaW" step="any"></label>
+            <label>Distancia (m): <input type="number" id="distanciaW" step="any"></label>
+            <button onclick="calcularTrabajo()">Calcular</button>
+            <p id="resultado-trabajo"></p>
+        </section>
+
+        <!-- Potencia (P = W/t) -->
+        <section class="calculator">
+            <h2>Potencia</h2>
+            <label>Trabajo (J): <input type="number" id="trabajo" step="any"></label>
+            <label>Tiempo (s): <input type="number" id="tiempoP" step="any"></label>
+            <button onclick="calcularPotencia()">Calcular</button>
+            <p id="resultado-potencia"></p>
+        </section>
+
+        <!-- Energía Cinética (Ec = 1/2*m*v²) -->
+        <section class="calculator">
+            <h2>Energía Cinética</h2>
+            <label>Masa (kg): <input type="number" id="masaEc" step="any"></label>
+            <label>Velocidad (m/s): <input type="number" id="velocidadEc" step="any"></label>
+            <button onclick="calcularEnergiaCinetica()">Calcular</button>
+            <p id="resultado-energia-cinetica"></p>
+        </section>
+
+        <!-- Energía Potencial (Ep = m*g*h) -->
+        <section class="calculator">
+            <h2>Energía Potencial</h2>
+            <label>Masa (kg): <input type="number" id="masaEp" step="any"></label>
+            <label>Altura (m): <input type="number" id="altura" step="any"></label>
+            <button onclick="calcularEnergiaPotencial()">Calcular</button>
+            <p id="resultado-energia-potencial"></p>
+        </section>
+
+        <!-- Presión (P = F/A) -->
+        <section class="calculator">
+            <h2>Presión</h2>
+            <label>Fuerza (N): <input type="number" id="fuerzaP" step="any"></label>
+            <label>Área (m²): <input type="number" id="area" step="any"></label>
+            <button onclick="calcularPresion()">Calcular</button>
+            <p id="resultado-presion"></p>
+        </section>
+
+        <!-- Densidad (ρ = m/V) -->
+        <section class="calculator">
+            <h2>Densidad</h2>
+            <label>Masa (kg): <input type="number" id="masaD" step="any"></label>
+            <label>Volumen (m³): <input type="number" id="volumen" step="any"></label>
+            <button onclick="calcularDensidad()">Calcular</button>
+            <p id="resultado-densidad"></p>
+        </section>
+
+        <!-- Frecuencia (f = 1/T) -->
+        <section class="calculator">
+            <h2>Frecuencia</h2>
+            <label>Período (s): <input type="number" id="periodo" step="any"></label>
+            <button onclick="calcularFrecuencia()">Calcular</button>
+            <p id="resultado-frecuencia"></p>
+        </section>
+    </main>
     <script src="script.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
